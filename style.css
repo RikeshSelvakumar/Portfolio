@@ -1,0 +1,193 @@
+:root {
+  --gradient-primary: linear-gradient(to top left, #40a39d, #cc00ff);
+  --gradient-secondary: linear-gradient(to top left, #ffb003, #ffcb03);
+}
+
+body {
+  /* Fallback for older browsers that don't support gradients */
+  background-color: #40a39d;
+  /* Modern browsers */
+  background: linear-gradient(90deg, #40a39d, rgba(0, 255, 0, 0) 100%),
+    linear-gradient(1deg, #2a2fa3, rgba(0, 255, 0, 0) 100%),
+    linear-gradient(190deg, #cc00ff, rgba(0, 0, 255, 0) 100%);
+  color: white;
+}
+h1 {
+  font-size: 60px;
+  font-family: "Outfit", sans-serif;
+  letter-spacing: 15px;
+  margin: 0;
+}
+h2 {
+  font-size: 45px;
+  font-family: "Outfit", sans-serif;
+  margin: 0;
+}
+h3 {
+  font-size: 30px;
+  font-family: "Outfit", sans-serif;
+  margin: 0;
+}
+p {
+  text-align: center;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+}
+
+hr {
+  border: dotted #eaf6f6 6px;
+  border-bottom: none;
+  width: 4%;
+  margin: 100px auto;
+}
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* Section 1 - main section */
+.grid-container-1 {
+  padding-left: 2rem;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+.role {
+  order: 1;
+  grid-column-start: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* Navigation bar */
+.nav-bar {
+  background-color: rgba(217, 217, 217, 0.12);
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 75%;
+  z-index: 1;
+}
+.nav ul li a {
+  background-color: inherit;
+  text-decoration: none;
+  padding: 8px 16px;
+  transition: all 0.3s ease-in-out;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  opacity: 100%;
+}
+
+.nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.nav-flex a {
+  color: white;
+  font-family: "Outfit", sans-serif;
+  font-size: 25px;
+}
+
+.nav-flex {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* Navigation bar 2 */
+.nav2 ul li a {
+  background-color: inherit;
+  text-decoration: none;
+  padding: 8px 16px;
+  transition: all 0.3s ease-in-out;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  opacity: 100%;
+}
+
+.nav2 ul li a:hover {
+  text-decoration: underline;
+}
+.nav-bar2{
+  background-image: var(--gradient-primary);
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  padding-bottom: 10px;
+  z-index: 2;
+}
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* Section 2 - about me*/
+.grid-container-2 {
+  height: 100vh;
+  padding-left: 2rem;
+}
+.journey {
+  text-align: center;
+}
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* Highlight effect */
+.highlight {
+  margin-top: 4rem;
+  text-decoration: underline;
+  letter-spacing: 10px;
+  position: relative;
+}
+
+.highlight::after {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.7;
+  transform: scale(1.07, 1.05) skewX(-15deg);
+  background-image: var(--gradient-primary);
+}
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* Section 3 - Skills */
+.grid-container-3 {
+  padding-left: 2rem;
+  height: 100vh;
+}
+img {
+  height: 200px;
+  width: 250px;
+  padding: 10px;
+}
+
+.tech-stack {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.flex-logo {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding-top: 30px;
+}
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* Section 4 - Projects showcase */
